@@ -2,7 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 
-const routerEmail = require("./routes/email.routes");
+//Rutas
+const routerProducts = require("./routes/products.routes");
 
 const app = express();
 
@@ -12,6 +13,6 @@ app.use(cors());
 app.use(morgan("dev"));
 
 // Routes
-app.use("/send-email", routerEmail);
+app.use("/products", routerProducts);
 
 module.exports = app;

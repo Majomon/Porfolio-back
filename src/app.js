@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 //Rutas
-const routerProducts = require("./routes/products.routes");
+const routerEmail = require("./routes/email.routes");
 
 const app = express();
 
@@ -13,6 +13,6 @@ app.use(cors());
 app.use(morgan("dev"));
 
 // Routes
-app.use("/products", routerProducts);
+app.use("/resendEmail", routerEmail);
 
 module.exports = app;
